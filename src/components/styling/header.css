@@ -1,0 +1,31 @@
+.header {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    object-fit: contain;
+}
+
+.header__searchIcon {
+    background-color: #cd9042;
+    padding: 5px;
+    height: 26px !important;
+}
+
+.header__search {
+    display: flex;
+    /* flex lets search bar take priority on size*/
+    flex: 1;
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    width: 100%;
+}
