@@ -8,7 +8,7 @@ function Header() {
     return (
         <nav className="header">
             <Link>
-                <img className ="header__logo" src="http://pngimg.com/uploads/dog_collar/dog_collar_PNG38.png" alt="logo puppy!"></img>
+                <img className ="header__logo" src="https://pixabay.com/get/57e4dd474d50a414f1dc8460da29317e173fd7e35b5779_640.png" alt="logo puppy!"></img>
             </Link>
             
             {/* Search Bar */}
