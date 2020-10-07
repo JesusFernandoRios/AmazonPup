@@ -1,7 +1,13 @@
 
 // this is the store
 export const initialState = {
-    basket:[],
+    basket:[{
+        rating:5,
+        id:2312,
+        title:"superlong name to test out the flexibility of the card and see what happens to this really really long",
+        price:300,
+        image:"http://pngimg.com/uploads/dog/dog_PNG153.png"
+    }],
     user:null
 }
 
