@@ -4,13 +4,22 @@ import {Link} from 'react-router-dom'
 import SearchIcon from "@material-ui/icons/Search"
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
 import {useStateValue} from "../utils/StateProvider"
+import { auth } from './config/firebase'
 
 function Header() {
 
     // useStateValue contains the state and dispatch
-    const [{basket}] = useStateValue()
+    const [{basket, user}] = useStateValue()
 
     console.log(basket)
+
+
+    const login =() => {
+        if(user){
+            auth.signOut()
+        }
+    }
+
 
     return (
         <nav className="header">
@@ -26,10 +35,12 @@ function Header() {
 
             {/* Nav buttons */}
             <div className="header__nav">
-                <Link to="/login" className="header__link">
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Hello,</span>
-                        <span className="header__optionLineTwo">Sign In</span>
+                {/* making the link show only when user is not logged in */}
+                <Link to={!user && "/login"} className="header__link">
+                    {/* setting onlick to login */}
+                    <div onClick={login} className="header__option">
+                        <span className="header__optionLineOne">Hello {user?.email}</span>
+                        <span className="header__optionLineTwo">{user ? "Sign out" : "Sign In"}</span>
                     </div>
                 </Link>
 

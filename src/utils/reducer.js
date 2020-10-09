@@ -1,21 +1,7 @@
 
 // this is the store
 export const initialState = {
-    basket:[{
-        rating:5,
-        id:23,
-        title:"superlong name to test out the flexibility of the card and see what happens to this really really long text",
-        price:300,
-        image:"http://pngimg.com/uploads/dog/dog_PNG153.png"
-    },
-    {
-        rating: 4,
-        id: 26, 
-        title: "superlong name to test out the flexibility of the card and see what happens to this really really long",
-        price: 800,
-        image:"http://pngimg.com/uploads/dog/dog_PNG50262.png"
-    },
-],
+    basket:[],
     user:null
 }
 
@@ -29,6 +15,12 @@ function reducer(state, action) {
     console.log(action)
 
     switch(action.type){
+        // setting case for user authentication
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
+            }
         case 'ADD_TO_BASKET':
             // logic for adding item to basket
             return {
