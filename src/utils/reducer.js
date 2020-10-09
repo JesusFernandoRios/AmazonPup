@@ -3,17 +3,17 @@
 export const initialState = {
     basket:[{
         rating:5,
-        id:2312,
+        id:23,
         title:"superlong name to test out the flexibility of the card and see what happens to this really really long text",
         price:300,
         image:"http://pngimg.com/uploads/dog/dog_PNG153.png"
     },
     {
-        rating:5,
-        id:2312,
-        title:"superlong name to test out the flexibility of the card and see what happens to this really really long text",
-        price:300,
-        image:"http://pngimg.com/uploads/dog/dog_PNG153.png"
+        rating: 4,
+        id: 26, 
+        title: "superlong name to test out the flexibility of the card and see what happens to this really really long",
+        price: 800,
+        image:"http://pngimg.com/uploads/dog/dog_PNG50262.png"
     },
 ],
     user:null
@@ -35,7 +35,25 @@ function reducer(state, action) {
             
         case 'REMOVE_FROM_BASKET':
             // logic for removing item from basket
-            return {state}
+
+            // cloned the basket
+            let newBasket = [...state.basket];
+
+            // check to see if product exists
+            const index = state.basket.findIndex((basketItem) => basketItem.id === action.id)
+
+                if(index >= 0) {
+                    // if item exists in basket remove it
+                    newBasket.splice(index,1)
+
+                }else {
+                    console.warn(
+                        `Can't remove product (id: ${action.id}) as its not in basket`
+                    );
+                }
+        
+
+            return {...state, basket: newBasket};
             
         default:
             return state
