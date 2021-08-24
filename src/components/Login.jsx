@@ -45,7 +45,7 @@ function Login() {
                     <button onClick={login} type="submit" className="login__signInButton">Sign In</button>
                 </form>
 
-                <p>By signing-in you agree to enjoy all the dog images avaliable on this website</p>
+                <p>By signing-in you agree to enjoy all the dog images available on this site</p>
 
                 <button onClick={register} className="login__registerButton">Create an Account</button>
             </div>

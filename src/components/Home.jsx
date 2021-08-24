@@ -15,7 +15,7 @@ function Home() {
                 <Product
                 rating={5}
                 id={23} 
-                title={"superlong name to test out the flexibility of the card and see what happens to this really really long"} 
+                title={"Cute Puppy"} 
                 price={300} 
                 image={"http://pngimg.com/uploads/dog/dog_PNG153.png"}
                 />
@@ -23,7 +23,7 @@ function Home() {
                 <Product
                 rating={5}
                 id={22} 
-                title={"superlong name to test out the flexibility of the card and see what happens to this really really long"} 
+                title={"Cute Puppy"} 
                 price={900} 
                 image={"https://media.wired.com/photos/5a55457ef41e4c2cd9ee6cb5/master/w_2560%2Cc_limit/Doggo-TopArt-104685145.jpg"}
                 />
@@ -41,7 +41,7 @@ function Home() {
                 <Product
                 rating={4}
                 id={26} 
-                title={"superlong name to test out the flexibility of the card and see what happens to this really really long"} 
+                title={"Cute Puppy"} 
                 price={800} 
                 image={"http://pngimg.com/uploads/dog/dog_PNG50262.png"}
                 />
@@ -59,7 +59,7 @@ function Home() {
                 <Product
                 rating={5}
                 id={28} 
-                title={"superlong name to test out the flexibility of the card and see what happens to this really really long"} 
+                title={"Cute Puppy"} 
                 price={200} 
                 image={"http://pngimg.com/uploads/dog/dog_PNG50266.png"}
                 />

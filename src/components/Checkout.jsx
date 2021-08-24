@@ -16,7 +16,7 @@ function Checkout() {
             <div className="checkout__left">
                 <img 
                 className="checkout__pic" 
-                src="https://www.hotelcurrent.com/wp-content/uploads/2013/08/dog-banner.jpg"
+                src="https://primopup.com/wp-content/uploads/2015/10/dog-banner.png"
                 alt="line of doggos"
                 />
                 {basket?.length === 0 ? (
